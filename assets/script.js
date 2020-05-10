@@ -1,7 +1,7 @@
 var today = new Date();
-var day = today.getDay();
 var month = today.getMonth();
 var date = today.getDate();
+var day = today.getDay();
 var daylist = [
   "Sunday",
   "Monday",
@@ -25,5 +25,6 @@ var monthlist = [
   "November",
   "December",
 ];
-document.getElementById("currentDay").innerHTML =
-  daylist[day] + ", " + monthlist[month] + " " + [date];
+var printedDay = daylist[day].concat(", " + monthlist[month] + " " + [date]);
+
+$("#currentDay").text(printedDay);
