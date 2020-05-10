@@ -28,3 +28,7 @@ var monthlist = [
 var printedDay = daylist[day].concat(", " + monthlist[month] + " " + [date]);
 
 $("#currentDay").text(printedDay);
+
+$(".saveBtn").click(function () {
+  console.log("clicked");
+});
