@@ -1,34 +1,10 @@
-var today = new Date();
-var month = today.getMonth();
-var date = today.getDate();
-var day = today.getDay();
-var daylist = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-var monthlist = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-var printedDay = daylist[day].concat(", " + monthlist[month] + " " + [date]);
+$("#currentDay").text(moment().format("dddd, MMMM Do"));
 
-$("#currentDay").text(printedDay);
-
-$(".saveBtn").click(function () {
-  console.log("clicked");
-});
+/*function currentTime(time) {
+  var hours = time.getHours();
+  var ampm = hours >= 12 ? "pm" : "am";
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+  var strTime = hours + ampm;
+  return strTime;
+}*/
